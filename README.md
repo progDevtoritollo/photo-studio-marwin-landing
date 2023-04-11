@@ -1,3 +1,8 @@
+photo-studio-marwin-landing
+design - https://www.figma.com/file/Rz6RFp3gmOJYPGbE0LOjUG/Website-design?node-id=0-1&amp;t=gp4grlqIVvUvpuh9-0
+
+Stack: -Next.ts -React.ts -axios -React Query -Material UI
+
 # TypeScript Next.js example
 
 This is a really simple project that shows the usage of Next.js with TypeScript.
