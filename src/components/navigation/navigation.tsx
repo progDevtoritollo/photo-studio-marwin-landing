@@ -1,11 +1,14 @@
 import React, { FC } from 'react'
-import Box from '@mui/material/Box'
+import { Box, Typography, Divider } from '@mui/material'
 import { Link as ScrollLink } from 'react-scroll'
+
 import { navigations } from './navigation.data'
 
 const Navigation: FC = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
+    <Box><Box sx={{
+      display: 'flex', flexDirection: { xs: 'column', md: 'row' }
+    }}>
       {navigations.map(({ path: destination, label }) => (
         <Box
           component={ScrollLink}
@@ -23,8 +26,9 @@ const Navigation: FC = () => {
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
+            // textDecoration: 'underline',
             px: { xs: 0, md: 3 },
-            mb: { xs: 3, md: 0 },
+            mb: { xs: 0.2, md: 1 },
             fontSize: { xs: '1.2rem', md: 'inherit' },
             ...(destination === '/' && {
               color: 'primary.main',
@@ -42,21 +46,12 @@ const Navigation: FC = () => {
             },
           }}
         >
-          <Box
-            sx={{
-              position: 'absolute',
-              top: 12,
-              transform: 'rotate(3deg)',
-              '& img': { width: 44, height: 'auto' },
-            }}
-          >
-            {/* eslint-disable-next-line */}
-            <img src="/images/headline-curve.svg" alt="Headline curve" />
-          </Box>
-          {label}
+          <Typography variant='Heading4'> {label}</Typography>
         </Box>
       ))}
-    </Box>
+
+    </Box><Divider sx={{ border: '1px solid #7D94AF' }} /></Box>
+
   )
 }
 

@@ -74,7 +74,7 @@ const theme = createTheme({
       color: '#000000',
       fontFamily: 'Vogue',
       fontStyle: 'normal',
-      fontWeight: 400, 
+      fontWeight: 500, 
       lineHeight: 36,
     },
     Heading1:{

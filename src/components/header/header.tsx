@@ -1,10 +1,25 @@
 import React, { FC } from 'react'
 
+import { Navigation } from '@/components/navigation';
+import { Box } from '@mui/material';
+import { Logo } from '../logo';
+
+
 const Header: FC = () => {
-
-
   return (
-    <h1>Header</h1>
+    <>
+      <Box sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: '0 auto',
+        height: '150px',
+        m: { xs: 2, md: 6 },
+      }}>
+        <Logo />
+        <Navigation />
+      </Box >
+    </>
   )
 }
 
