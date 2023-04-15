@@ -75,7 +75,7 @@ const theme = createTheme({
       fontFamily: 'Vogue',
       fontStyle: 'normal',
       fontWeight: 500, 
-      lineHeight: 36,
+      // lineHeight: 3,
     },
     Heading1:{
       color: '#000000',
@@ -83,14 +83,14 @@ const theme = createTheme({
       fontStyle: 'normal',
       fontWeight: 400,  
       fontSize: '58px',
-      lineHeight: '115%',
+      // lineHeight: '115%',
     },Heading2:{
       fontSize: '48px',
       color: '#000000',
       fontFamily: 'Corbel',
       fontStyle: 'normal',
       fontWeight: 500,
-      lineHeight: '58px',
+      // lineHeight: '58px',
     fontFeatureSettings: '"pnum" on, "lnum" on',
 
     },Heading3:{
@@ -98,7 +98,7 @@ const theme = createTheme({
       fontStyle: 'normal',
       fontWeight: 700, //bolt
       fontSize: '30px',
-      lineHeight: '36px',
+      // lineHeight: '36px',
       fontFeatureSettings: '"pnum" on, "lnum" on',
       color: '#000000',
     },
@@ -107,7 +107,7 @@ const theme = createTheme({
       fontStyle: 'normal',
       fontWeight: 400,
       fontSize: '25px',
-      lineHeight: '30px',
+      // lineHeight: '30px',
       fontFeatureSettings: '"pnum" on, "lnum" on',
       color: '#000000',
     },
@@ -116,7 +116,7 @@ const theme = createTheme({
       fontStyle: 'normal',
       fontWeight: 700,
       fontSize: '25px',
-      lineHeight: '30px',
+      // lineHeight: '30px',
       textDecorationLine: 'underline',
       color: '#000000',
     },
@@ -125,7 +125,7 @@ const theme = createTheme({
       fontStyle: 'normal',
       fontWeight: 400,
       fontSize: '16px',
-      lineHeight: '19px',
+      // lineHeight: '19px',
       color: '#000000',
     },
     Paragraph1_light:{
@@ -133,7 +133,7 @@ const theme = createTheme({
     fontStyle: 'normal',
     fontWeight: 300,
     fontSize: '25px',
-    lineHeight: '30px',
+    // lineHeight: '30px',
     color: '#000000',
     },
     Paragraph1_regular:{
@@ -150,7 +150,7 @@ const theme = createTheme({
       fontStyle: 'normal',
       fontWeight: 300,
       fontSize: '18px',
-      lineHeight: '22px',
+      // lineHeight: '22px',
       color: '#000000',
     },
     Paragraph3:{
@@ -158,7 +158,7 @@ const theme = createTheme({
       fontStyle: 'normal',
       fontWeight: 300,
       fontSize: '14px',
-      lineHeight: '17px',
+      // lineHeight: '17px',
       color: '#000000',
     },
     fontFamily: [

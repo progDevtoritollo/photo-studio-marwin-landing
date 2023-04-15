@@ -18,6 +18,11 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <h3>List of imported sections</h3>
+      {/* 1.tag line 
+          2. studios container 
+          3. Albums
+          4.Photographers
+      */}
       <Typography
         variant="Heading1"
       >

@@ -16,7 +16,11 @@ const Header: FC = () => {
         height: '150px',
         m: { xs: 2, md: 6 },
       }}>
-        <Logo />
+
+        <Box sx={{
+          mr: { xs: 2, md: 25 },
+        }} ><Logo /></Box>
+
         <Navigation />
       </Box >
     </>
