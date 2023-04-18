@@ -1,5 +1,6 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
+import Head from 'next/head';
 import { NextPageWithLayout } from '@/interfaces/layout'
 import { MainLayout } from '@/components/layout'
 import { Divider, Typography } from '@mui/material';
@@ -7,7 +8,7 @@ import { Divider, Typography } from '@mui/material';
 
 // import { HomeFeature, HomeHero, HomePopularCourse, HomeTestimonial, HomeOurMentors, DynamicHomeNewsLetter } from '@/components/home'
 
-// const DynamicHomeHero = dynamic(() => import('../components/home/hero'))
+const DynamicHomeHero = dynamic(() => import('../components/home/hero'))
 // const DynamicHomeFeature = dynamic(() => import('../components/home/feature'))
 // const DynamicHomePopularCourse = dynamic(() => import('../components/home/popular-courses'))
 // const DynamicHomeTestimonial = dynamic(() => import('../components/home/testimonial'))
@@ -17,12 +18,15 @@ import { Divider, Typography } from '@mui/material';
 const Home: NextPageWithLayout = () => {
   return (
     <>
-      <h3>List of imported sections</h3>
-      {/* 1.tag line 
-          2. studios container 
-          3. Albums
-          4.Photographers
-      */}
+      <Head>
+        <title>My Page Title</title>
+        <meta name="description" content="This is my page description" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet" />
+      </Head>
+      <DynamicHomeHero />
+
       <Typography
         variant="Heading1"
       >

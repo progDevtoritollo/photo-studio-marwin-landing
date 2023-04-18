@@ -79,22 +79,22 @@ const theme = createTheme({
     },
     Heading1:{
       color: '#000000',
-      fontFamily: 'Dela Gothic One',
+      fontFamily: 'Montserrat',
       fontStyle: 'normal',
-      fontWeight: 400,  
+      fontWeight: 700,  
       fontSize: '58px',
-      // lineHeight: '115%',
+      lineHeight: '115%',
     },Heading2:{
       fontSize: '48px',
       color: '#000000',
-      fontFamily: 'Corbel',
+      fontFamily: 'Nunito Sans',
       fontStyle: 'normal',
       fontWeight: 500,
       // lineHeight: '58px',
     fontFeatureSettings: '"pnum" on, "lnum" on',
 
     },Heading3:{
-      fontFamily: 'Corbel',
+      fontFamily: 'Nunito Sans',
       fontStyle: 'normal',
       fontWeight: 700, //bolt
       fontSize: '30px',
@@ -103,7 +103,7 @@ const theme = createTheme({
       color: '#000000',
     },
     Heading4:{
-      fontFamily: 'Corbel',
+      fontFamily: 'Nunito Sans',
       fontStyle: 'normal',
       fontWeight: 400,
       fontSize: '25px',
@@ -112,7 +112,7 @@ const theme = createTheme({
       color: '#000000',
     },
     Heading4_with_line:{
-      fontFamily: 'Corbel',
+      fontFamily: 'Nunito Sans',
       fontStyle: 'normal',
       fontWeight: 700,
       fontSize: '25px',
@@ -121,7 +121,7 @@ const theme = createTheme({
       color: '#000000',
     },
     Heading5:{
-      fontFamily: 'Corbel',
+      fontFamily: 'Nunito Sans',
       fontStyle: 'normal',
       fontWeight: 400,
       fontSize: '16px',
@@ -129,15 +129,15 @@ const theme = createTheme({
       color: '#000000',
     },
     Paragraph1_light:{
-      fontFamily: 'Corbel',
+      fontFamily: 'Nunito Sans',
     fontStyle: 'normal',
     fontWeight: 300,
     fontSize: '25px',
-    // lineHeight: '30px',
+    lineHeight: '30px',
     color: '#000000',
     },
     Paragraph1_regular:{
-      fontFamily: 'Corbel',
+      fontFamily: 'Nunito Sans',
     fontStyle: 'normal',
     fontWeight: 400,
     fontSize: '25px',
@@ -146,7 +146,7 @@ const theme = createTheme({
     color: '#000000',
     },
     Paragraph2:{
-      fontFamily: 'Corbel',
+      fontFamily: 'Nunito Sans',
       fontStyle: 'normal',
       fontWeight: 300,
       fontSize: '18px',
@@ -154,7 +154,7 @@ const theme = createTheme({
       color: '#000000',
     },
     Paragraph3:{
-      fontFamily: 'Corbel',
+      fontFamily: 'Nunito Sans',
       fontStyle: 'normal',
       fontWeight: 300,
       fontSize: '14px',
@@ -162,7 +162,7 @@ const theme = createTheme({
       color: '#000000',
     },
     fontFamily: [
-      'Corbel',
+      'Nunito Sans',
       'Dela Gothic One',
       'Corbel',
     ].join(','),
