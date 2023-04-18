@@ -3,7 +3,6 @@ import { Box, Typography } from '@mui/material';
 import Image from 'next/image'
 
 import { Logo } from '@/components/logo';
-import map from '@/image/map.jpg'
 import { Messengers } from '@/components/messengers'
 
 const Footer: FC = () => {
@@ -21,7 +20,7 @@ const Footer: FC = () => {
 					mr: { xs: 2, md: 5 },
 				}} >
 					<Logo />
-					<Image src={map} alt="map" width={170} height={115} />
+					<Image src='/images/map.jpg' alt="map" width={170} height={115} />
 				</Box>
 				<Box sx={{
 					display: 'flex', flexDirection: 'column',
