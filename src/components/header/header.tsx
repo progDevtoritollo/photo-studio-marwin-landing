@@ -14,7 +14,8 @@ const Header: FC = () => {
         justifyContent: 'center',
         margin: '0 auto',
         height: '150px',
-        m: { xs: 2, md: 6 },
+        // boxSizing: 'content-box',
+        p: { xs: 2, md: 6 },
       }}>
 
         <Box sx={{
