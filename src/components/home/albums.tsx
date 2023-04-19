@@ -61,9 +61,14 @@ const Card: FC<ExpItemProps> = ({ item }) => {
     }}>
       <Box sx={{
         backgroundColor: 'rgba(255, 255, 255, 0.75)',
-        borderRadius: '0px 0px 15px 15px'
+        borderRadius: '0px 0px 15px 15px',
+        p: { md: 1 }
       }}>
-        <Box sx={{ m: { xs: 2, mb: 3 } }} >
+        <Box sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }} >
           <Typography variant="Heading4">
             {title}
           </Typography>
@@ -72,6 +77,7 @@ const Card: FC<ExpItemProps> = ({ item }) => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          textAlign: 'center',
           ml: 3, mr: { xs: 0, md: 4 }
         }} >
           <Typography variant="Paragraph2">
