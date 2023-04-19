@@ -9,7 +9,7 @@ import { Divider, Typography } from '@mui/material';
 // import { HomeFeature, HomeHero, HomePopularCourse, HomeTestimonial, HomeOurMentors, DynamicHomeNewsLetter } from '@/components/home'
 
 const DynamicHomeHero = dynamic(() => import('../components/home/hero'))
-// const DynamicHomeFeature = dynamic(() => import('../components/home/feature'))
+const HomeOurStudios = dynamic(() => import('../components/home/our-studios'))
 // const DynamicHomePopularCourse = dynamic(() => import('../components/home/popular-courses'))
 // const DynamicHomeTestimonial = dynamic(() => import('../components/home/testimonial'))
 // const DynamicHomeOurMentors = dynamic(() => import('../components/home/mentors'))
@@ -26,7 +26,7 @@ const Home: NextPageWithLayout = () => {
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet" />
       </Head>
       <DynamicHomeHero />
-
+      <HomeOurStudios />
       <Typography
         variant="Heading1"
       >
