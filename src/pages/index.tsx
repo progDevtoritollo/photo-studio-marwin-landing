@@ -10,7 +10,7 @@ import { Divider, Typography } from '@mui/material';
 
 const DynamicHomeHero = dynamic(() => import('../components/home/hero'))
 const HomeOurStudios = dynamic(() => import('../components/home/our-studios'))
-// const DynamicHomePopularCourse = dynamic(() => import('../components/home/popular-courses'))
+const HomeAlbums = dynamic(() => import('../components/home/albums'))
 // const DynamicHomeTestimonial = dynamic(() => import('../components/home/testimonial'))
 // const DynamicHomeOurMentors = dynamic(() => import('../components/home/mentors'))
 // const DynamicHomeNewsLetter = dynamic(() => import('../components/home/newsletter'))
@@ -27,35 +27,9 @@ const Home: NextPageWithLayout = () => {
       </Head>
       <DynamicHomeHero />
       <HomeOurStudios />
-      <Typography
-        variant="Heading1"
-      >
-        Heading - 1 light 58px
-      </Typography>
-      <Divider />
-      <Typography
-        variant="Heading2"
-      >
-        Heading - 2 light 48px
-      </Typography>
-      <Divider />
-      <Typography
-        variant="Heading3"
-      >
-        Heading - 3 light 30px
-      </Typography>
-      <Divider />
-      <Typography
-        variant="Heading4"
-      >
-        Heading - 4 light 25px
-      </Typography>
-      <Divider />
-      <Typography
-        variant="Heading4"
-      >
-        Heading4_with_line
-      </Typography>
+      <HomeAlbums />
+
+
     </>
   )
 }
