@@ -52,21 +52,21 @@ const ContentSlices: FC<ExpItemProps> = ({ item, id }) => {
 
 const HomeOurStudios: FC = () => {
   return (
-    <Box id="our-studios" sx={{
+    <Box id="studios" sx={{
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       mx: { md: 30 },
       py: 12
     }}>
-      <Box id="our-studios" sx={{
+      <Box sx={{
         mb: 5
       }}><Typography variant="Heading2">
           Our studios
         </Typography>
       </Box>
 
-      <Box id="our-studios" >
+      <Box  >
         <Grid container spacing={0.5}>
           {content.map((item, id) => {
             return (

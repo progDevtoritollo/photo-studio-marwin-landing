@@ -17,10 +17,10 @@ export const navigations: Navigation[] = [
     label: 'Photographers',
     path: 'photographers', // '/photographers',
   },
-  {
-    label: 'Contacts',
-    path: 'contacts', // '/contacts',
-  },
+  // {
+  //   label: 'Contacts',
+  //   path: 'contacts', // '/contacts',
+  // },
   {
     label: 'About us',
     path: 'about-us', // '/about-us',

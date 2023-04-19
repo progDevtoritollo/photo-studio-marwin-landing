@@ -8,7 +8,7 @@ import { Messengers } from '@/components/messengers'
 const Footer: FC = () => {
 	return (
 		<>
-			<Box sx={{
+			<Box id='about-us' sx={{
 				display: 'flex',
 				alignItems: 'flex-start',
 				justifyContent: ' space-evenly',
