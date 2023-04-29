@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { Typography, Container, Grid, Box } from '@mui/material'
 import { Link as ScrollLink } from 'react-scroll'
+import { Button } from '../button'
 
 
 
@@ -114,6 +115,7 @@ const HomeAlbums: FC = () => {
           )
         })}
       </Grid>
+      <Button>I want a photo</Button>
     </Box>
   )
 }
