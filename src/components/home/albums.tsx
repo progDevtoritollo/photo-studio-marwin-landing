@@ -1,21 +1,13 @@
 import React, { FC } from 'react'
 import { Typography, Container, Grid, Box } from '@mui/material'
 import { Link as ScrollLink } from 'react-scroll'
+
 import { Button } from '../button'
+import { Card } from '../card'
+import { CardData } from '@/interfaces/card-exp'
 
 
-
-interface Exp {
-  title: string
-  text: string
-  image: string
-}
-
-interface ExpItemProps {
-  item: Exp,
-}
-
-const content: Array<Exp> = [
+const content: Array<CardData> = [
   {
     title: 'Portrait',
     text: 'An artistic expression realizes itself through a compositional form. It is specific to art',
@@ -43,53 +35,6 @@ const content: Array<Exp> = [
   },
 
 ]
-
-const Card: FC<ExpItemProps> = ({ item }) => {
-  const { image, text, title } = item
-
-  return (
-    <Box sx={{
-      backgroundImage: `url(${image})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      width: '370px',
-      minHeight: '401px',
-      justifyContent: 'flex-end',
-
-    }}>
-      <Box sx={{
-        backgroundColor: 'rgba(255, 255, 255, 0.75)',
-        borderRadius: '0px 0px 15px 15px',
-        p: { md: 1 }
-      }}>
-        <Box sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }} >
-          <Typography variant="Heading4">
-            {title}
-          </Typography>
-        </Box>
-        <Box sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
-          ml: 3, mr: { xs: 0, md: 4 }
-        }} >
-          <Typography variant="Paragraph2">
-            {text}
-          </Typography>
-        </Box>
-      </Box>
-
-    </Box >
-  )
-}
 
 const HomeAlbums: FC = () => {
   return (
