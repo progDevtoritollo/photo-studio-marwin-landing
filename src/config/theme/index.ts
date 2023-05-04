@@ -66,6 +66,15 @@ declare module '@mui/material/Typography' {
 }
   //400 - regular,500 - medium, 700 - bold, 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 320,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
   spacing: 10, 
   palette:{ ...paletteBase, ...paletteLight, },
   typography: {

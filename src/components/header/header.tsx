@@ -11,7 +11,7 @@ const Header: FC = () => {
       <Box sx={{
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         margin: '0 auto',
         height: '150px',
         // boxSizing: 'content-box',
