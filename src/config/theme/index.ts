@@ -60,8 +60,6 @@ declare module '@mui/material/Typography' {
     Paragraph1_regular: true
     Paragraph2:true
     Paragraph3:true
-
-
   }
 }
   //400 - regular,500 - medium, 700 - bold, 
