@@ -32,24 +32,6 @@ const content: Array<CardData> = [
     text: 'A photographer who can turn anyone into a magazine cover model',
     image: "/images/photographers/photographer_3.png",
   },
-  ///
-  {
-    title: 'Emma Barrett',
-    text: 'A photographer who can turn anyone into a magazine cover model',
-    image: "/images/photographers/photographer_3.png",
-  }, {
-    title: 'Emma Barrett',
-    text: 'A photographer who can turn anyone into a magazine cover model',
-    image: "/images/photographers/photographer_3.png",
-  }, {
-    title: 'Emma Barrett',
-    text: 'A photographer who can turn anyone into a magazine cover model',
-    image: "/images/photographers/photographer_3.png",
-  }, {
-    title: 'Emma Barrett',
-    text: 'A photographer who can turn anyone into a magazine cover model',
-    image: "/images/photographers/photographer_3.png",
-  },
 ]
 
 
