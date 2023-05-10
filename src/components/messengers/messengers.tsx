@@ -12,7 +12,11 @@ const Messenger: FC = () => {
   return (
     <Box
       sx={{
-        display: 'flex', flexDirection: 'row',
+        display: 'flex',
+        flexDirection: 'row',
+        width: '90%',
+        justifyContent: { xs: 'space-around', sm: 'flex-start' },
+        ml: { sm: 5 },
         mr: { xs: 3, md: 1 },
         mt: { xs: 0.2, md: 0.5 }
       }}>
