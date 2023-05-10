@@ -7,3 +7,5 @@ ToDo:
 
 1. Responsiveness is mostly dumb, need to it up.
 2. Config Image settings in next.config.js
+3. Fix album section - Grid
+4. Fix slider in Photographers section
