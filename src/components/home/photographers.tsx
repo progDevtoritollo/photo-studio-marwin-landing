@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
-import { Typography, Container, Grid, Box } from '@mui/material'
+import { Typography, useMediaQuery, Box } from '@mui/material'
 
 import { Swiper, SwiperSlide } from "swiper/react";
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -36,6 +37,18 @@ const content: Array<CardData> = [
 
 
 const HomeAlbums: FC = () => {
+  const delNavBtn = !useMediaQuery('(max-width:780px)');
+
+  const styles = {
+    container: {
+      width: '600px'
+    },
+    mySwiper: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  };
 
   return (
     <Box id="photographers" sx={{
@@ -46,24 +59,29 @@ const HomeAlbums: FC = () => {
       pb: 15
     }}>
       <Box sx={{ mb: 5 }}>
-        <Typography variant="Heading2">
+        <Typography variant="Heading2" sx={{ fontSize: { xs: 27, sm: 40, md: 52 } }}>
           Photographers
         </Typography>
       </Box>
-      <Box sx={{
+      <Box style={styles.container} sx={{
         minWidth: '0px',
         mb: 5,
-        maxWidth: '70vh',
+        maxWidth: {
+          xs: '315px',
+          sm: '410px',
+          md: '590px',
+
+        },
         alignItems: 'center',
+        justifyContent: 'center'
       }}>
-        <Swiper navigation={true} loop={true} modules={[Navigation, Pagination]} pagination={true} className="mySwiper"
+        <Swiper navigation={delNavBtn} loop={true} modules={[Navigation, Pagination]} pagination={true} style={styles.mySwiper}
         >
           {content.map((item) => {
             return (
-
               <SwiperSlide>
                 <Box sx={{
-                  ml: 15,
+                  ml: { xs: 3.3, sm: 7.5, md: 13.7 },
                   mb: 5
                 }}>
                   <Card item={item} />
@@ -73,7 +91,7 @@ const HomeAlbums: FC = () => {
           })}
         </Swiper>
       </Box>
-    </Box>
+    </Box >
   )
 }
 

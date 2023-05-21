@@ -18,15 +18,15 @@ const Card: FC<CardItemProps> = ({ item }) => {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      width: '370px',
-      minHeight: '540px',
+      width: { xs: '240px', sm: '270px', md: '320px' },
+      minHeight: { xs: '360px', sm: '420px', md: '430px' },
       justifyContent: 'flex-end',
-      borderRadius: '0px 0px 15px 15px',
+      borderRadius: '15px 15px 15px 15px',
     }}>
       <Box sx={{
         backgroundColor: 'rgba(255, 255, 255, 0.75)',
         borderRadius: '0px 0px 15px 15px',
-        p: { md: 1 }
+        p: 1,
       }}>
         <Box sx={{
           display: 'flex',
@@ -42,9 +42,9 @@ const Card: FC<CardItemProps> = ({ item }) => {
           alignItems: 'center',
           justifyContent: 'center',
           textAlign: 'center',
-          ml: 3, mr: { xs: 0, md: 4 }
+          mx: 3
         }} >
-          <Typography variant="Paragraph2">
+          <Typography variant="Paragraph2" sx={{ fontSize: { xs: 12, sm: 14, md: 18 } }}>
             {text}
           </Typography>
         </Box>

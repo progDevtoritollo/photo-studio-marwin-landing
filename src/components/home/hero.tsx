@@ -13,7 +13,7 @@ const HomeHero: FC = () => {
       backgroundImage: 'url(/images/studio_tag_line.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      minHeight: '75vh',
+      minHeight: '65vh',
       display: 'flex',
       flexDirection: 'display-flex',
       alignItems: 'center'

@@ -16,5 +16,5 @@ const Container: FC<Props> = ({ children, ...rest }) => {
 export default Container;
 
 const styles = {
-  layout: { maxWidth: '1000px', margin: '0 auto', flex: '1', padding: '3rem 1rem 3rem 1rem' },
+  layout: { maxWidth: '1220px', margin: '0 auto', flex: '1', padding: '3rem 1rem 3rem 1rem' },
 };

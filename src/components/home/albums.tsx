@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
-import { Typography, Container, Grid, Box } from '@mui/material'
+import { Typography, Grid, Box } from '@mui/material'
 import { Link as ScrollLink } from 'react-scroll'
 
+import { Container } from '@/components/layout'
 import { Button } from '../button'
 import { Card } from '../card'
 import { CardData } from '@/interfaces/card-exp'
@@ -38,30 +39,37 @@ const content: Array<CardData> = [
 
 const HomeAlbums: FC = () => {
   return (
-    <Box id="albums" sx={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      mx: { md: 30 },
-      pb: 15
-    }}>
-      <Box sx={{ mb: 5 }}>
-        <Typography variant="Heading2">
-          Albums
-        </Typography>
-      </Box>
+    <Container >
+      <Box id="albums" sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        // mx: {xs:,sm:, md: 10 },
+        pb: 5
+      }}>
+        <Box sx={{ mb: 5 }}>
+          <Typography variant="Heading2">
+            Albums
+          </Typography>
+        </Box>
 
-      <Grid container spacing={2}>
-        {content.map((item) => {
-          return (
-            <Grid key={item.text} item xs={10} sm={8} md={4}>
-              <Card item={item} />
-            </Grid>
-          )
-        })}
-      </Grid>
-      <Button>I want a photo</Button>
-    </Box>
+        <Grid sx={{
+          width: '100%',
+          alignItems: 'center',
+          justifyContent: 'center',
+          p: 0,
+          pl: { xs: 2, sm: 6, md: 8 }
+        }} container spacing={2}>
+          {content.map((item) => {
+            return (
+              <Grid key={item.text} item xs={8} sm={7} md={5} lg={4}>
+                <Card item={item} />
+              </Grid>)
+          })}
+        </Grid>
+        <Button />
+      </Box>
+    </Container>
   )
 }
 
