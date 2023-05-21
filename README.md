@@ -7,7 +7,6 @@ ToDo:
 
 1. Responsiveness is mostly dumb, need to it up. good on width 320px and width more than 1100px like in Figma layout
 2. change config Image settings to next.config.js from inline
-3. Fix slider in Photographers section
 
 tasks
 
