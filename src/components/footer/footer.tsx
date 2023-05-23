@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import { Logo } from '@/components/logo';
 import { Messengers } from '@/components/messengers'
+import { Contacts } from '../contacts';
 
 const Footer: FC = () => {
 	const isMobile = useMediaQuery('(max-width:1250px)');
@@ -31,29 +32,7 @@ const Footer: FC = () => {
 							<Logo />
 							<Image src='/images/map.jpg' alt="map" width={170} height={115} />
 						</Box>)}
-
-					<Box sx={{
-						display: 'flex', flexDirection: 'column',
-						// mr: { xs: 2, md: 20 },
-					}}>
-						<Typography variant='Heading4_with_line' sx={{
-							fontSize: { xs: 13.5, sm: 23, }
-						}} > Contacts</Typography>
-						<Box sx={{
-							display: 'flex', flexDirection: 'column',
-							mt: { xs: 2, md: 1 }, mb: { xs: 2, md: 1 },
-						}}>
-							<Typography variant='Paragraph1_regular'
-								sx={{
-									fontSize: { xs: 13.5, sm: 23, },
-								}}>+380 93 365 12 56
-							</Typography>
-							<Typography variant='Paragraph1_regular' sx={{
-								fontSize: { xs: 13.5, sm: 23, },
-							}}>+380 50 395 18 92
-							</Typography>
-						</Box>
-					</Box>
+					<Contacts />
 					<Box sx={{ display: 'flex', flexDirection: 'column', mr: { xs: 2, md: 5 }, }}>
 						<Typography variant='Heading4_with_line' sx={{
 							fontSize: { xs: 13.5, sm: 23, },
