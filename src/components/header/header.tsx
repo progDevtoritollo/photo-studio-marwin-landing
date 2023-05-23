@@ -13,15 +13,10 @@ const Header: FC = () => {
         alignItems: 'center',
         justifyContent: 'space-between',
         margin: '0 auto',
-        height: '150px',
-        // boxSizing: 'content-box',
-        p: { xs: 2, md: 6 },
+        height: { xs: '100px', sm: '100px', md: '150px' },
+        p: { xs: 1, sm: 2, md: 6 },
       }}>
-
-        <Box sx={{
-          mr: { xs: 2, md: 25 },
-        }} ><Logo /></Box>
-
+        <Logo />
         <Navigation />
       </Box >
     </>

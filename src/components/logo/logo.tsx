@@ -4,12 +4,12 @@ import { Box, Typography } from '@mui/material'
 const Logo: FC = () => {
   return (
     <Box
-      sx={{
-        mr: { xs: 3, md: 1 },
-
-      }}>
+    >
       <Typography
         variant="logo"
+        sx={{
+          fontSize: { xs: 24, sm: 25, md: 40 }
+        }}
       >
         MARWIN
       </Typography>
