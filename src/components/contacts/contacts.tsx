@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
-
 import { Box, Typography, } from '@mui/material';
+
+import { Messengers } from '@/components/messengers'
+
 
 const Contacts: FC = () => {
   return (
@@ -15,8 +17,7 @@ const Contacts: FC = () => {
           Contacts
         </Typography>
         <Box sx={{
-          display: 'flex', flexDirection: 'column',
-          mt: { xs: 2, md: 1 }, mb: { xs: 2, md: 1 },
+          display: 'flex', flexDirection: 'column', pb: { xs: 1, md: 1 },
         }}>
           <Typography variant='Paragraph1_regular'
             sx={{
@@ -28,6 +29,7 @@ const Contacts: FC = () => {
           }}>+380 50 395 18 92
           </Typography>
         </Box>
+        <Messengers />
       </Box>
     </>
   )

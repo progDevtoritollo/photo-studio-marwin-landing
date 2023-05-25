@@ -35,12 +35,10 @@ const Footer: FC = () => {
 					<Contacts />
 					<Box sx={{ display: 'flex', flexDirection: 'column', mr: { xs: 2, md: 5 }, }}>
 						<Typography variant='Heading4_with_line' sx={{
-							fontSize: { xs: 13.5, sm: 23, },
+							fontSize: { xs: 14, sm: 23, }
 						}} >Working hours</Typography>
 						<Box sx={{
-							display: 'flex', flexDirection: 'column',
-							mt: { xs: 2, md: 1 },
-							mb: { xs: 2, md: 1 },
+							display: 'flex', flexDirection: 'column', pb: { xs: 1, md: 1 },
 						}}>
 							<Typography variant='Paragraph1_regular' sx={{
 								fontSize: { xs: 13.5, sm: 23, },
@@ -53,7 +51,6 @@ const Footer: FC = () => {
 						</Box>
 					</Box>
 				</Box>
-				<Messengers />
 			</Box >
 		</>
 	)

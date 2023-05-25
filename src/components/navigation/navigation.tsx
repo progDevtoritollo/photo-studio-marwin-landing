@@ -9,7 +9,6 @@ import { navigations } from './navigation.data'
 import type { Navigation } from '@/interfaces/navigation'
 import { Logo } from '../logo';
 import { Contacts } from '../contacts';
-import Messenger from '../messengers/messengers';
 import theme from '@/config/theme';
 
 const Navigation: FC = () => {
@@ -134,7 +133,6 @@ const Navigation: FC = () => {
           maxWidth: { xs: 130, sm: 220 },
         }}>
           <Contacts />
-          <Messenger />
         </Box>
         <Box sx={{
           display: 'flex',
