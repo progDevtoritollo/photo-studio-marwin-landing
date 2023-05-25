@@ -43,33 +43,31 @@ const HomeAlbums: FC = () => {
       <Box id="albums" sx={{
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-        // mx: {xs:,sm:, md: 10 },
-        pb: 5
+        alignItems: 'center'
       }}>
         <Box sx={{ mb: 5 }}>
-          <Typography variant="Heading2">
+          <Typography variant="Heading2" >
             Albums
           </Typography>
         </Box>
-
         <Grid sx={{
           width: '100%',
           alignItems: 'center',
           justifyContent: 'center',
           p: 0,
-          pl: { xs: 2, sm: 6, md: 8 }
         }} container spacing={2}>
           {content.map((item) => {
             return (
-              <Grid key={item.text} item xs={8} sm={7} md={5} lg={4}>
-                <Card item={item} />
+              <Grid key={item.text} item xs={12} sm={7} md={5} lg={4}>
+                <Grid container justifyContent="center">
+                  <Card item={item} />
+                </Grid>
               </Grid>)
           })}
         </Grid>
         <Button />
       </Box>
-    </Container>
+    </Container >
   )
 }
 
