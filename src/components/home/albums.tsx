@@ -46,7 +46,7 @@ const HomeAlbums: FC = () => {
         alignItems: 'center'
       }}>
         <Box sx={{ mb: 5 }}>
-          <Typography variant="Heading2" >
+          <Typography variant="Heading2" sx={{ fontSize: { xs: 40, sm: 54, mb: 60 } }}>
             Albums
           </Typography>
         </Box>

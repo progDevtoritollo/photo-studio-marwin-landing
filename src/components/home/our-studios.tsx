@@ -81,7 +81,7 @@ const HomeOurStudios: FC = () => {
       }}>
         <Box sx={{
           mb: { xs: 1, sm: 2, md: 3.5 },
-        }}><Typography variant="Heading2" sx={{ fontSize: { xs: 24, sm: 34, md: 48 } }}>
+        }}><Typography variant="Heading2" sx={{ fontSize: { xs: 40, sm: 54, mb: 60 } }}>
             Our studios
           </Typography>
         </Box>

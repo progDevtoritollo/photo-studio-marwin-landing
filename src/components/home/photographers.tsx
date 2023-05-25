@@ -59,7 +59,7 @@ const HomeAlbums: FC = () => {
       pb: 15
     }}>
       <Box sx={{ mb: 5 }}>
-        <Typography variant="Heading2" sx={{ fontSize: { xs: 27, sm: 40, md: 52 } }}>
+        <Typography variant="Heading2" sx={{ fontSize: { xs: 40, sm: 54, mb: 60 } }}>
           Photographers
         </Typography>
       </Box>
