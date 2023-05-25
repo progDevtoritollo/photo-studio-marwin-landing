@@ -55,6 +55,7 @@ const HomeAlbums: FC = () => {
           alignItems: 'center',
           justifyContent: 'center',
           p: 0,
+          mb: { xs: 2.5, sm: 5 },
         }} container spacing={2}>
           {content.map((item) => {
             return (

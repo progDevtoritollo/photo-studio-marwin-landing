@@ -40,7 +40,9 @@ const HomeHero: FC = () => {
           Photography is a way to feel, touch, love. What you caught on film is captured forever...the film remembers little things, keeps the memory of little things even when you have forgotten everything...</Typography>
         </Box>
         <br />
-        <Button />
+
+        <Box sx={{ m: { xs: 2, md: 3 }, ml: { xs: 0, md: 0 }, py: { xs: 1, md: 2 }, }}>
+          <Button /></Box>
       </Box>
     </Box>
   )
