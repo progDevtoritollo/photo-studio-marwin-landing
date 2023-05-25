@@ -46,6 +46,7 @@ const Navigation: FC = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'space-between',
       }}
       role="presentation"
       onClick={toggleDrawer(false)}
@@ -83,6 +84,7 @@ const Navigation: FC = () => {
         {navigations.map(({ path: destination, label }) => {
           return (
             <Box
+              onClick={toggleDrawer(false)}
               component={ScrollLink}
               key={destination}
               activeClass="current"
@@ -96,7 +98,7 @@ const Navigation: FC = () => {
                 cursor: 'pointer',
                 fontWeight: 300,
                 px: { xs: 0, md: 3 },
-                mb: { xs: 0.2, md: 1 },
+                mb: 3,
                 fontSize: { xs: '1.2rem', md: 'inherit' },
                 ...(destination === '/' && {
                   color: 'primary.main',
@@ -124,6 +126,7 @@ const Navigation: FC = () => {
         width: '100%',
         justifyContent: "space-between",
         px: 1,
+        mb: 3.56,
       }}>
         <Box sx={{
           display: 'flex',
@@ -133,7 +136,12 @@ const Navigation: FC = () => {
           <Contacts />
           <Messenger />
         </Box>
-        <Image src='/images/map.jpg' alt="map" width={170} height={115} />
+        <Box sx={{
+          display: 'flex',
+          alignItems: 'center',
+        }}>
+          <Image src='/images/map.jpg' alt="map" width={170} height={115} />
+        </Box>
       </Box>
     </Box >
 
