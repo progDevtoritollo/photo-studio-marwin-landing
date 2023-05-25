@@ -56,7 +56,7 @@ const HomeAlbums: FC = () => {
       flexDirection: 'column',
       alignItems: 'center',
       mx: { md: 30 },
-      pb: 15
+      mb: 5
     }}>
       <Box sx={{ mb: 5 }}>
         <Typography variant="Heading2" sx={{ fontSize: { xs: 40, sm: 54, mb: 60 } }}>
