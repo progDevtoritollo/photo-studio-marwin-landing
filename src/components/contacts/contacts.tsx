@@ -12,7 +12,7 @@ const Contacts: FC = () => {
         // mr: { xs: 2, md: 20 },
       }}>
         <Typography variant='Heading4_with_line' sx={{
-          fontSize: { xs: 14, sm: 23, }
+          fontSize: { xs: 13, sm: 23, }
         }} >
           Contacts
         </Typography>
@@ -21,11 +21,11 @@ const Contacts: FC = () => {
         }}>
           <Typography variant='Paragraph1_regular'
             sx={{
-              fontSize: { xs: 13.5, sm: 23, },
+              fontSize: { xs: 13, sm: 23, },
             }}>+380 93 365 12 56
           </Typography>
           <Typography variant='Paragraph1_regular' sx={{
-            fontSize: { xs: 13.5, sm: 23, },
+            fontSize: { xs: 13, sm: 23, },
           }}>+380 50 395 18 92
           </Typography>
         </Box>

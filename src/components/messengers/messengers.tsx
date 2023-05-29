@@ -9,34 +9,32 @@ import whatsapp from './image/logos_whatsapp-icon.png'
 
 
 const Messenger: FC = () => {
+
+  const styles = {
+    image: {
+      mr: { xs: 1, md: 1 },
+    }
+  }
+
   return (
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'row',
-        width: '90%',
-        justifyContent: { xs: 'space-around', sm: 'flex-start' },
-        ml: { sm: 5 },
-        mr: { xs: 3, md: 1 },
+        width: '100%',
+        justifyContent: { xs: 'flex-end', sm: 'flex-start' },
         mt: { xs: 0.2, md: 0.5 }
       }}>
+      <Box sx={styles.image}>
+        <Image
+          src={instagram} alt="instagram" />
+      </Box>
       <Box
-        sx={{
-          mr: { xs: 3, md: 1 },
-        }}><Image
-          src={instagram} alt="instagram" /></Box>
+        sx={styles.image}><Image src={whatsapp} alt="whatsapp" /></Box>
       <Box
-        sx={{
-          mr: { xs: 3, md: 1 },
-        }}><Image src={whatsapp} alt="whatsapp" /></Box>
+        sx={styles.image}><Image src={telegram} alt="telegram" /></Box>
       <Box
-        sx={{
-          mr: { xs: 3, md: 1 },
-        }}><Image src={telegram} alt="telegram" /></Box>
-      <Box
-        sx={{
-          mr: { xs: 3, md: 1 },
-        }}><Image src={facebook} alt="facebook" /></Box>
+        sx={styles.image}><Image src={facebook} alt="facebook" /></Box>
     </Box>
   )
 }

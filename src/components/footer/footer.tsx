@@ -18,7 +18,8 @@ const Footer: FC = () => {
 				justifyContent: ' space-evenly',
 				backgroundColor: '#A5BCDA',
 				// height: '260px',
-				pt: { xs: 2, md: 4 }
+				py: { xs: 1, md: 2 },
+				alignItem: 'flex-start',
 			}}>
 				<Box sx={{
 					display: 'flex',
@@ -35,18 +36,18 @@ const Footer: FC = () => {
 					<Contacts />
 					<Box sx={{ display: 'flex', flexDirection: 'column', mr: { xs: 2, md: 5 }, }}>
 						<Typography variant='Heading4_with_line' sx={{
-							fontSize: { xs: 14, sm: 23, }
+							fontSize: { xs: 13, sm: 23, }
 						}} >Working hours</Typography>
 						<Box sx={{
 							display: 'flex', flexDirection: 'column', pb: { xs: 1, md: 1 },
 						}}>
 							<Typography variant='Paragraph1_regular' sx={{
-								fontSize: { xs: 13.5, sm: 23, },
+								fontSize: { xs: 13, sm: 23, },
 							}}>
 								Monday - Friday from 10:00 to 22:00
 							</Typography>
 							<Typography variant='Paragraph1_regular' sx={{
-								fontSize: { xs: 13.5, sm: 23, },
+								fontSize: { xs: 13, sm: 23, },
 							}}> Saturday - Sunday from 10:00 to 23:00 </Typography>
 						</Box>
 					</Box>

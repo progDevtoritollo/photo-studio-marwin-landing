@@ -131,6 +131,7 @@ const Navigation: FC = () => {
           display: 'flex',
           flexDirection: 'column',
           maxWidth: { xs: 130, sm: 220 },
+          ml: 0.5,
         }}>
           <Contacts />
         </Box>
