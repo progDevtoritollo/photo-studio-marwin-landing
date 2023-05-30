@@ -3,7 +3,6 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head';
 import { NextPageWithLayout } from '@/interfaces/layout'
 import { MainLayout } from '@/components/layout'
-import { Divider, Typography } from '@mui/material';
 
 const DynamicHomeHero = dynamic(() => import('../components/home/hero'))
 const DynamicHomeOurStudios = dynamic(() => import('../components/home/our-studios'))

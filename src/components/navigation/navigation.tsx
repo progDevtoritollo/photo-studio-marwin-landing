@@ -4,6 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link as ScrollLink } from 'react-scroll'
 import Image from 'next/image'
+import { useRouter } from 'next/router';
 
 import { navigations } from './navigation.data'
 import type { Navigation } from '@/interfaces/navigation'
@@ -11,17 +12,17 @@ import { Logo } from '../logo';
 import { Contacts } from '../contacts';
 import theme from '@/config/theme';
 
+
 const Navigation: FC = () => {
+  const router = useRouter();
+  const currentPath = router.pathname;
+  let isUnderline;
+  currentPath == '/order-photo' ?
+    isUnderline = false :
+    isUnderline = true;
   const isMobile = useMediaQuery('(max-width:600px)');
 
   const [isOpen, setIsOpen] = useState(false);
-
-  // const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-  //   setIsOpen(event.currentTarget);
-  // };
-  const handleClose = () => {
-    setIsOpen(false);
-  };
 
   const toggleDrawer = (open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -219,7 +220,9 @@ const Navigation: FC = () => {
             </Box>
           ))}
 
-        </Box><Divider sx={{ border: '1px solid #7D94AF' }} /></Box >)
+        </Box>
+        {isUnderline ? (<Divider sx={{ border: '1px solid #7D94AF' }} />) : null}
+      </Box >)
   )
 }
 

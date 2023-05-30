@@ -146,7 +146,7 @@ const theme = createTheme({
     Paragraph1_regular:{
       fontFamily: 'Nunito Sans',
     fontStyle: 'normal',
-    fontWeight: 400,
+    fontWeight: 600,
     fontSize: '25px',
     lineHeight: '30px',
     fontFeatureSettings: "'pnum' on, 'lnum' on",
