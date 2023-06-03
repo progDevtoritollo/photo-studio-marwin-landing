@@ -36,7 +36,7 @@ declare module '@mui/material/styles' {
     Heading4?: React.CSSProperties;
     Heading4_with_line?: React.CSSProperties;
     Heading5?: React.CSSProperties;
-
+Heading5_bolt?:React.CSSProperties;
     Paragraph1_light?: React.CSSProperties;
     Paragraph1_regular?: React.CSSProperties;
     Paragraph2?: React.CSSProperties;
@@ -55,6 +55,7 @@ declare module '@mui/material/Typography' {
     Heading4:true
     Heading4_with_line:true
     Heading5:true
+Heading5_bolt:true
 
     Paragraph1_light: true
     Paragraph1_regular: true
@@ -112,7 +113,7 @@ const theme = createTheme({
     Heading4:{
       fontFamily: 'Nunito Sans',
       fontStyle: 'normal',
-      fontWeight: 600,
+      fontWeight: 400,
       fontSize: '25px',
       // lineHeight: '30px',
       fontFeatureSettings: '"pnum" on, "lnum" on',
@@ -132,9 +133,18 @@ const theme = createTheme({
       fontStyle: 'normal',
       fontWeight: 400,
       fontSize: '16px',
+      // lineHeight: '25px',
+      color: '#000000',
+    },
+    Heading5_bolt:{
+      fontFamily: 'Corbel',
+      fontStyle: 'normal',
+      fontWeight: 700,
+      fontSize: '16px',
       // lineHeight: '19px',
       color: '#000000',
     },
+
     Paragraph1_light:{
       fontFamily: 'Nunito Sans',
     fontStyle: 'normal',

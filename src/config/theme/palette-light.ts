@@ -1,7 +1,13 @@
-import { PaletteOptions } from '@mui/material'
-import { grey, common } from '@mui/material/colors'
+import { PaletteOptions, TypeText } from '@mui/material';
+import { grey, common } from '@mui/material/colors';
 
-const palette: PaletteOptions = {
+interface CustomPaletteOptions extends PaletteOptions {
+  text: TypeText & {
+    text_light_gray?: string;
+  };
+}
+
+const palette: CustomPaletteOptions = {
   mode: 'light',
   background: {
     default: '#CED9E6',
@@ -9,9 +15,10 @@ const palette: PaletteOptions = {
   },
   text: {
     primary: grey[900],
-    secondary: '#717171', // grey[700],
+    secondary: '#717171',
     disabled: grey[500],
+    text_light_gray: '#9DA5AF',
   },
-}
+};
 
-export default palette
+export default palette;
