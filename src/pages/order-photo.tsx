@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { Typography, Box, useMediaQuery, Avatar, Divider } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-
 import { NextPageWithLayout } from '@/interfaces/layout'
 import { MainLayout } from '@/components/layout'
 import { Form } from '@/components/form';
@@ -58,7 +57,7 @@ const OrderPhoto: NextPageWithLayout = () => {
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet" />
       </Head>
-      <Box>
+      <Box sx={{ minHeight: 'calc(100vh - 372px);' }}>
         <Divider sx={{ border: '1px solid #7D94AF' }} />
         {isMobile ? null : (<Box sx={{ display: 'flex', alignItems: 'center', ml: 13, mt: 2 }}>
           <Typography>main page</Typography>
@@ -93,8 +92,8 @@ const OrderPhoto: NextPageWithLayout = () => {
             </Box>)}
 
           <Box>
-            <Typography sx={{ display: 'flex', justifyContent: 'center', mb: 3.5 }} variant='Heading4'>Enter your details here</Typography>
-            <Box>form</Box>
+            <Typography sx={{ display: 'flex', justifyContent: 'center', mb: 3.5, minWidth: 50, }} variant='Heading4'>Enter your details here</Typography>
+            <Box><Form /></Box>
           </Box>
         </Box>
       </Box>
