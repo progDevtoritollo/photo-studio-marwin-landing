@@ -138,7 +138,8 @@ const Form: FC = () => {
 							sx={{
 								bgcolor: lite_blue,
 								borderRadius: 1,
-								mr: 3,
+								mr: { md: 3 },
+								mb: { xs: 1, md: 0 },
 								'& .MuiOutlinedInput-notchedOutline': {
 									borderColor: lite_blue,
 								},
@@ -212,7 +213,7 @@ const Form: FC = () => {
 						}}
 					/>
 					<Button type="submit" variant="contained" sx={{
-						bgcolor: dark_blue, borderRadius: 0.8, px: 4.7, py: 1.2, mt: 1.9, marginLeft: 'auto', '&:hover ': {
+						bgcolor: dark_blue, borderRadius: 0.8, px: 4.7, py: 1.2, mt: 1.9, marginLeft: { xs: "", md: 'auto' }, '&:hover ': {
 							bgcolor: lite_blue,
 						},
 					}}>

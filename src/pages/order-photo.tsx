@@ -59,12 +59,12 @@ const OrderPhoto: NextPageWithLayout = () => {
       </Head>
       <Box sx={{ minHeight: 'calc(100vh - 372px);' }}>
         <Divider sx={{ border: '1px solid #7D94AF' }} />
-        {isMobile ? null : (<Box sx={{ display: 'flex', alignItems: 'center', ml: 13, mt: 2 }}>
+        {isMobile ? null : (<Box sx={{ display: 'flex', alignItems: 'center', ml: { sm: 5, md: 13 }, mt: 2 }}>
           <Typography>main page</Typography>
           <Arrow />
           <Typography >Registration for a photo session</Typography>
         </Box>)}
-        <Typography variant='Heading2' sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+        <Typography variant='Heading2' sx={{ display: 'flex', justifyContent: 'center', mt: 3, fontSize: { xs: 24, sm: 35, md: 40, lg: 45 } }}>
           Registration for a photo session</Typography>
         <Box sx={{
           display: 'flex', flexDirection: 'row',
@@ -76,7 +76,7 @@ const OrderPhoto: NextPageWithLayout = () => {
               <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 <Typography variant='Heading4' sx={{ display: 'flex', justifyContent: 'center', mb: 3.5 }}>Our contacts</Typography>
                 <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-                  <Box sx={{ display: 'flex', flexDirection: 'column', mr: 13, justifyContent: 'center' }}>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', mr: { sm: 2, md: 7, lg: 11, xl: 13 }, justifyContent: 'center' }}>
                     <Typography variant='Heading5'>651 Ramiro Track Apt. 085</Typography>
                     <Typography variant='Heading5'>+380 93 365 12 56</Typography>
                     <Typography variant='Heading5'>+380 50 395 18 92 </Typography>
@@ -92,7 +92,7 @@ const OrderPhoto: NextPageWithLayout = () => {
             </Box>)}
 
           <Box>
-            <Typography sx={{ display: 'flex', justifyContent: 'center', mb: 3.5, minWidth: 50, }} variant='Heading4'>Enter your details here</Typography>
+            <Typography sx={{ display: 'flex', justifyContent: 'center', mb: 3.5, minWidth: 50, fontSize: { xs: 18, sm: 25 } }} variant='Heading4'>Enter your details here</Typography>
             <Box><Form /></Box>
           </Box>
         </Box>
