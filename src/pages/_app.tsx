@@ -6,6 +6,9 @@ import { EmotionCache } from '@emotion/cache'
 import { CacheProvider } from '@emotion/react'
 import { createEmotionCache } from '@/utils'
 import { MUIProvider } from '@/providers'
+import { QueryProvider } from '@/providers'
+import { Toaster } from "react-hot-toast";
+
 import 'slick-carousel/slick/slick.css'
 import '@/styles/globals.css'
 import '@/styles/react-slick.css'
@@ -32,11 +35,17 @@ const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <title>React Coursespace</title>
       </Head>
-      <MUIProvider>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        {getLayout(<Component {...pageProps} />)}
-      </MUIProvider>
+      <QueryProvider>
+        <MUIProvider>
+          <Toaster
+            position="bottom-right"
+            reverseOrder={false}
+          />
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          {getLayout(<Component {...pageProps} />)}
+        </MUIProvider>
+      </QueryProvider>
     </CacheProvider>
   )
 }
