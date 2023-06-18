@@ -5,6 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link as ScrollLink } from 'react-scroll'
 import Image from 'next/image'
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import { navigations } from './navigation.data'
 import type { Navigation } from '@/interfaces/navigation'
@@ -115,8 +116,9 @@ const Navigation: FC = () => {
                   },
                 },
               }}
-            >
-              <Typography variant='Heading4'> {label}</Typography>
+            ><Link href={`/#${destination}`} legacyBehavior>
+                <a style={{ textDecoration: 'none' }}>
+                  <Typography variant='Heading4'> {label}</Typography></a></Link>
             </Box>
           )
         })
@@ -214,9 +216,12 @@ const Navigation: FC = () => {
                 },
               }}
             >
-              <Typography variant='Heading4' sx={{
-                fontSize: { xs: 10, sm: 12, md: 15, lg: 20 }
-              }}> {label}</Typography>
+              <Link href={`/#${destination}`} legacyBehavior>
+                <a style={{ textDecoration: 'none' }}>
+                  <Typography variant='Heading4' sx={{
+                    fontSize: { xs: 10, sm: 12, md: 15, lg: 20 }
+                  }}> {label}</Typography>
+                </a></Link>
             </Box>
           ))}
 
