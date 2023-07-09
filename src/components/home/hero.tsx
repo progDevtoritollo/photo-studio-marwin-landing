@@ -42,7 +42,8 @@ const HomeHero: FC = () => {
         <br />
 
         <Box sx={{ m: { xs: 2, md: 3 }, ml: { xs: 0, md: 0 }, py: { xs: 1, md: 2 }, }}>
-          <Button /></Box>
+          <Button type='button' text='I want a photo' />
+        </Box>
       </Box>
     </Box>
   )

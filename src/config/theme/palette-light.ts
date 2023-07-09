@@ -7,10 +7,13 @@ interface CustomPaletteOptions extends PaletteOptions {
     text_light_gray?: string;
     dark_opacity?: string;
     grey_opacity?: string;
+    White_regular?: string;
+    
   };
   background: TypeBackground & {
     lite_blue?: string;
     dark_blue?: string;
+    Blue_button_pressed?: string;
   };
 }
 
@@ -20,7 +23,8 @@ const palette: CustomPaletteOptions = {
     default: '#CED9E6',
     paper: common.white,
     dark_blue:'rgba(5, 53, 109, 0.51);',
-    lite_blue:'rgba(165, 188, 218, 0.91);'
+    lite_blue:'rgba(165, 188, 218, 0.91);',
+    Blue_button_pressed:'#002653'
   },
   text: {
     primary: grey[900],
@@ -28,7 +32,8 @@ const palette: CustomPaletteOptions = {
     disabled: grey[500],
     text_light_gray: '#9DA5AF',
     grey_opacity:'#0000003F',
-    dark_opacity:'##000000ad'
+    dark_opacity:'##000000ad',
+    White_regular:'#FFFFFF'
   },
 };
 

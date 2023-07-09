@@ -1,81 +1,19 @@
 import React, { FC } from 'react'
 import { borderColor, styled } from '@mui/system';
-import { Typography, Box, TextField, Button } from '@mui/material';
+import { Typography, Box, TextField, } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { useFormik, useFormikContext, FormikValues } from 'formik';
 import { useMutation } from 'react-query';
 import { toast } from 'react-hot-toast';
 
+import { Button } from '../button';
 import OrdersBuilder from '@/api/orders/index'
 
-// interface InputProps {
-// 	label: string;
-// 	bgcolor: string;
-// 	color: string;
-// 	hover_color: string;
-// }
 
-// const Input: FC<InputProps> = ({ label, bgcolor, color, hover_color }) => {
-// 	const formik = useFormikContext<FormikValues>();
-
-
-
-
-// 	return (
-// 		<>
-// 			<TextField
-// 				id={label}
-// 				name={label}
-// 				label={
-// 					<Typography variant="Paragraph3" color={color} >
-// 						Phone Number
-// 					</Typography>
-// 				}
-// 				variant="outlined"
-// 				fullWidth
-// 				value={formik.values.phone}
-// 				onChange={formik.handleChange}
-// 				sx={{
-// 					bgcolor: bgcolor,
-// 					borderRadius: 1,
-// 					'& .MuiOutlinedInput-notchedOutline': {
-// 						borderColor: bgcolor,
-// 					},
-// 					'&:hover .MuiOutlinedInput-notchedOutline': {
-// 						borderColor: hover_color,
-// 					},
-// 				}}
-// 				InputProps={{
-// 					style: { height: 33, },
-// 				}}
-// 				InputLabelProps={{
-// 					sx: { marginTop: '-10px' },
-// 				}}
-// 			/>
-
-// 			<TextField
-// 				name={label}
-// 				label={label}
-// 				variant="outlined"
-// 				fullWidth
-// 				sx={{
-// 					// px:
-// 					// bgcolor: bgcolor,
-// 					// color: color,
-// 				}}
-// 				InputProps={{
-// 					sx: {
-// 						height: '40px', // Задайте желаемую высоту
-// 						// padding: '5px 10px', // Задайте желаемый отступ (padding)
-// 						// margin: '5px 10px',
-// 						bgcolor: bgcolor,
-// 						color: color,
-// 					},
-// 				}}
-// 			/>
-// 		</>
-// 	)
-// }
+type FormErrors = {
+	name?: string;
+	phone?: string;
+};
 
 const Form: FC = () => {
 	const theme = useTheme();
@@ -95,7 +33,25 @@ const Form: FC = () => {
 			phone: '',
 			additionalInf: '',
 		},
-		onSubmit: handleSubmit //handleSubmit
+		onSubmit: handleSubmit, //handleSubmit
+		validateOnMount: true,
+		validate: (values) => {
+			const errors: FormErrors = {};
+
+			if (!values.name) {
+				errors.name = 'Required';
+			} else if (!/^[a-zA-Z\s]+$/u.test(values.name)) {
+				errors.name = 'Invalid name';
+			}
+
+			if (!values.phone) {
+				errors.phone = 'Required';
+			} else if (!/^\d{10}$/u.test(values.phone)) {
+				errors.phone = 'Invalid phone';
+			}
+
+			return errors
+		},
 	});
 
 	const mutation = useMutation('create-order',
@@ -112,6 +68,7 @@ const Form: FC = () => {
 		},
 	});
 
+
 	return (
 		<Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
 			<form onSubmit={formik.handleSubmit}>
@@ -120,8 +77,6 @@ const Form: FC = () => {
 						display: 'flex',
 						flexDirection: { xs: 'column', md: 'row', pb: 2 },
 					}}>
-						{/* <Input label='name' bgcolor={lite_blue} color={dark_opacity} hover_color={dark_blue} />
-						<Input label='phone' bgcolor={lite_blue} color={dark_opacity} hover_color={dark_blue} /> */}
 
 						<TextField
 							id="name"
@@ -153,6 +108,7 @@ const Form: FC = () => {
 							InputLabelProps={{
 								sx: { marginTop: '-10px' },
 							}}
+
 						/>
 						<TextField
 							id="phone"
@@ -212,7 +168,7 @@ const Form: FC = () => {
 							},
 						}}
 					/>
-					<Button type="submit" variant="contained" sx={{
+					{/* <ButtonFromUI type="submit" variant="contained" sx={{
 						bgcolor: dark_blue, borderRadius: 0.8, px: 4.7, py: 1.2, mt: 1.9, marginLeft: { xs: "", md: 'auto' }, '&:hover ': {
 							bgcolor: lite_blue,
 						},
@@ -220,7 +176,9 @@ const Form: FC = () => {
 						<Typography variant='Paragraph2' sx={{ color: '#ffffff', fontSize: 18, fontWeight: 700, textTransform: 'none', }}>
 							{mutation.isLoading ? 'Submitting...' : 'Submit'}
 						</Typography>
-					</Button>
+					</ButtonFromUI> */}
+
+					<Button type="submit" text={mutation.isLoading ? 'Submitting...' : 'Submit'} disabled={!formik.isValid} />
 				</Box>
 			</form>
 		</Box >

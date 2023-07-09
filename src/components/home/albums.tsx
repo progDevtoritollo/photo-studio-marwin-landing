@@ -66,7 +66,7 @@ const HomeAlbums: FC = () => {
               </Grid>)
           })}
         </Grid>
-        <Button />
+        <Button type="button" text="I want a photo" />
       </Box>
     </Container >
   )

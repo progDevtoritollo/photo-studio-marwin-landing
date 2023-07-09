@@ -10,9 +10,11 @@ ToDo:
 
 - https://nextjs.org/docs/pages/api-reference/next-config-js
 
-tasks
+3. Add smooth scroll by crossing from the second page
 
-3. добавить возможность перехода на главную страницу, на конкретную секцию с второстепенной страницы через header
+tasks:
+
+add right effects on buttons
 
 4. Add Webpack
 
