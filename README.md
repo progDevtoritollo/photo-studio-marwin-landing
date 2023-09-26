@@ -14,7 +14,7 @@ ToDo:
 
 tasks:
 
-add right effects on buttons
+stick footer
 
 4. Add Webpack
 

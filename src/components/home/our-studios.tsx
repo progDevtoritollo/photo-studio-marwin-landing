@@ -91,7 +91,7 @@ const HomeOurStudios: FC = () => {
             spacing={2}  >
             {content.map((item, id) => {
               return (
-                <ContentSlices item={item} id={id} />
+                <ContentSlices key={id} item={item} id={id} />
               )
             })}
           </Grid>

@@ -117,8 +117,8 @@ const Navigation: FC = () => {
                 },
               }}
             ><Link href={`/#${destination}`} legacyBehavior>
-                <a style={{ textDecoration: 'none' }}>
-                  <Typography variant='Heading4'> {label}</Typography></a></Link>
+                <Typography variant='Heading4'> {label}</Typography>
+              </Link>
             </Box>
           )
         })
@@ -217,11 +217,10 @@ const Navigation: FC = () => {
               }}
             >
               <Link href={`/#${destination}`} legacyBehavior>
-                <a style={{ textDecoration: 'none' }}>
-                  <Typography variant='Heading4' sx={{
-                    fontSize: { xs: 10, sm: 12, md: 15, lg: 20 }
-                  }}> {label}</Typography>
-                </a></Link>
+                <Typography variant='Heading4' sx={{
+                  fontSize: { xs: 10, sm: 12, md: 15, lg: 20 }
+                }}> {label}</Typography>
+              </Link>
             </Box>
           ))}
 

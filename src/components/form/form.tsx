@@ -90,11 +90,13 @@ const Form: FC = () => {
 							fullWidth
 							value={formik.values.name}
 							onChange={formik.handleChange}
+
+
 							sx={{
-								bgcolor: lite_blue,
-								borderRadius: 1,
 								mr: { md: 3 },
 								mb: { xs: 1, md: 0 },
+								bgcolor: lite_blue,
+								borderRadius: 1,
 								'& .MuiOutlinedInput-notchedOutline': {
 									borderColor: lite_blue,
 								},

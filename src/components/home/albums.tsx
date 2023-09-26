@@ -57,13 +57,14 @@ const HomeAlbums: FC = () => {
           p: 0,
           mb: { xs: 2.5, sm: 5 },
         }} container spacing={2}>
-          {content.map((item) => {
+          {content.map((item, index) => {
             return (
-              <Grid key={item.text} item xs={12} sm={7} md={5} lg={4}>
+              <Grid key={index} item xs={12} sm={7} md={5} lg={4}>
                 <Grid container justifyContent="center">
-                  <Card item={item} />
+                  <Card key={index} item={item} />
                 </Grid>
-              </Grid>)
+              </Grid>
+            );
           })}
         </Grid>
         <Button type="button" text="I want a photo" />
